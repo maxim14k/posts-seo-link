@@ -1,3 +1,5 @@
+<?php
+
 function top_viewed_posts_shortcode($atts) {
     $atts = shortcode_atts(
         [
@@ -66,3 +68,5 @@ function categ_list_shortcode(){
 }
 
 add_shortcode('categ_list', 'categ_list_shortcode');
+
+?>
