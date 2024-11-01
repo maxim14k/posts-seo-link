@@ -20,7 +20,7 @@ function top_viewed_posts_shortcode($atts) {
     if (!empty($atts['category_id'])) {
         $args['cat'] = $atts['category_id'];
     } elseif (is_category()) {
-        $args['cat'] = get_queried_object_id();
+        $args['cat'] = get_queried_object_id(); // if no param with category, so current category
     } 
 
     $query = new WP_Query($args);
